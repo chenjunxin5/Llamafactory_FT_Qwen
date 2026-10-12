@@ -5,9 +5,14 @@ python -m pip install torchaudio==2.5.1+cu124 \
   --no-deps
 
 
-git lfs install 失败，先安装git-lfs
-apt-get update && apt-get install -y git-lfs
+
+用魔搭下载模型：
+pip install modelscope
+modelscope download --model Qwen/Qwen2.5-7B-Instruct --local_dir ./Qwen2.5-7B-Instruct
+
 
 
 llamafactory-cli启动在6006端口，使用AutoDL自定义服务直接访问 https://u1215558-9f50-23c1d67e.westc.seetacloud.com:8443
 GRADIO_SERVER_PORT=6006 llamafactory-cli webui
+
+
